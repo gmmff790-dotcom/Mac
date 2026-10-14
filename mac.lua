@@ -3874,7 +3874,7 @@ function Container:AddToggle(idx, info)
 	if checkbox then
 		track = New("Frame", {
 			Name = "Checkbox",
-			Size = UDim2.fromOffset(18, 10),
+			Size = UDim2.fromOffset(18, 18),
 			Theme = {
 				BackgroundColor3 = function(t)
 					return Toggle.Value and MacUI.Accent or t.Field
@@ -3941,7 +3941,7 @@ function Container:AddToggle(idx, info)
 		local width = pressed and 22 or 18
 		local x = Toggle.Value and (36 - width) or 2
 		Tween(knob, { Position = UDim2.fromOffset(x, 2), Size = UDim2.fromOffset(width, 18) }, duration, Enum.EasingStyle.Quint)
-		Tween(knobShadow, { Position = UDim2.fromOffset(x, 3), Size = UDim2.fromOffset(width, 18) }, duration, Enum.EasingStyle.Quint)
+		Tween(knobShadow, { Position = UDim2.fromOffset(x, 3), Size = UDim2.fromOffset(width, 10) }, duration, Enum.EasingStyle.Quint)
 	end
 
 	function Toggle:SetValue(value)
